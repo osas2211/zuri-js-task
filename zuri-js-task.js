@@ -12,7 +12,7 @@ function convertFahrToCelsius(Fahr){
         return result;
     }   
 }
-convertFahrToCelsius(0);
+
 
 
 // checkYuGiOh ------ Task 2
@@ -49,4 +49,4 @@ function checkYuGiOh(n){
     return result;
 }
 
-console.log(checkYuGiOh(30));
+
