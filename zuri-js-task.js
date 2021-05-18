@@ -2,11 +2,14 @@
 
 function convertFahrToCelsius(Fahr){
     if (typeof(Number(Fahr)) !== "number" || Number.isNaN(Number(Fahr))){
-        return `${JSON.stringify(Fahr)} is not a valid number but a/an ${typeof(Fahr)}`    
+        error_msg = `${JSON.stringify(Fahr)} is not a valid number but a/an ${typeof(Fahr)}`;
+        console.log(error_msg)
+        return error_msg;    
     }
     else{
         Fahr = Number(Fahr);
         result = Number((((5*Fahr) - 160)/9).toFixed(4));
+        console.log(result)
         return result;
     }   
 }
@@ -17,7 +20,9 @@ function convertFahrToCelsius(Fahr){
 
 function checkYuGiOh(n){
     if (typeof(Number(n)) !== "number" || Number.isNaN(Number(n))){
-        return `invalid parameter: ${JSON.stringify(n)}`
+        error_msg = `invalid parameter: ${JSON.stringify(n)}`
+        console.log(error_msg)
+        return error_msg
     }
     else {
         let result = []
@@ -48,6 +53,7 @@ function checkYuGiOh(n){
                 result.push(count);
             }
         }
+        console.log(result)
         return result;
     }
     
