@@ -2,11 +2,11 @@
 
 function convertFahrToCelsius(Fahr){
     if (typeof(Number(Fahr)) !== "number" || Number.isNaN(Number(Fahr))){
-        return `${Fahr} is not a valid number but a/an ${typeof(Fahr)}`    
+        return `${JSON.stringify(Fahr)} is not a valid number but a/an ${typeof(Fahr)}`    
     }
     else{
         Fahr = Number(Fahr);
-        result = (((5*Fahr) - 160)/9).toFixed(4);
+        result = Number((((5*Fahr) - 160)/9).toFixed(4));
         return result;
     }   
 }
@@ -17,7 +17,7 @@ function convertFahrToCelsius(Fahr){
 
 function checkYuGiOh(n){
     if (typeof(Number(n)) !== "number" || Number.isNaN(Number(n))){
-        return `invalid parameter: "${n}"`
+        return `invalid parameter: ${JSON.stringify(n)}`
     }
     else {
         let result = []
